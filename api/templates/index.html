@@ -2,10 +2,16 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Meu App Flask</title>
+    <title>Cadastro</title>
 </head>
 <body>
-    <h1>Olá, {{ nome|capitalize }}!</h1>
-    <p>Seja bem-vindo ao seu primeiro app com Flask e HTML.</p>
+    <h1>Cadastro de Pessoa</h1>
+    <form method="POST">
+        <input type="text" name="nome" placeholder="Digite seu nome" required>
+        <button type="submit">Enviar</button>
+    </form>
+    <br>
+    <a href="/lista">Ver todos os cadastrados</a>
 </body>
 </html>
+
