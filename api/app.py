@@ -18,7 +18,7 @@ def init_db():
             )
         ''')
         conn.commit()
-
+init_db()
 @app.route("/", methods=["GET", "POST"])
 def home():
     if request.method == "POST":
@@ -41,8 +41,9 @@ def lista():
     return render_template("lista.html", pessoas=pessoas)
 
 if __name__ == "__main__":
-    init_db()
+    
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port)
+
 
 
