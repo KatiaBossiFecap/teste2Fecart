@@ -3,4 +3,6 @@ services:
     name: flask-no-render
     env: python
     buildCommand: "pip install -r api/requirements.txt"
-    startCommand: "gunicorn api.app:app"
+    startCommand: "cd api && gunicorn app:app"
+
+
