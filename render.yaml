@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: flask-no-render
+    env: python
+    buildCommand: "pip install -r api/requirements.txt"
+    startCommand: "gunicorn api.app:app"
